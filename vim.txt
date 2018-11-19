@@ -1,0 +1,51 @@
+
+
+Section 2 : vim
+
+	Vim is the editor of choice for many developers. It is a 'modal' text editor based on the vi editor by Bill Joy. Modal means key inputs can do different things.
+
+	Mode 1 : Insert Mode
+		- Enter from command mode with 'i'
+		- Escape with 'esc' -> Command Mode
+	Mode 2 : Command Mode
+		- This is the default mode and is used to navigate the file, cut/copy/paste, delete, search/replace, undo/redo.
+		h moves the cursor one character to the left.
+		j moves the cursor down one line.
+		k moves the cursor up one line.
+		l moves the cursor one character to the right.
+		0 moves the cursor to the beginning of the line.
+		$ moves the cursor to the end of the line.
+		w move forward one word.
+		b move backward one word.
+		G move to the end of the file.
+		gg move to the beginning of the file.
+		`. move to the last edit.
+	- Do multiple iterations of a command at a time by prefacing it with a number. For example, '6w' will move forward six words.
+
+	-Delete Commands :
+		d starts the delete operation.
+		dw will delete a word.
+		d0 will delete to the beginning of a line.
+		d$ will delete to the end of a line.
+		dgg will delete to the beginning of the file.
+		dG will delete to the end of the file.
+		u will undo the last operation.
+		Ctrl-r will redo the last undo.
+
+	-Combinations of navigation keys and edit keys can do fun things! 'dgg' will delete to the beginning of the file, for example.
+
+	-Search and Replace
+		'/word' will search for word. hit n to find the next instance, or N to find the prevous instnace. Reverse this process by using '?word' instead.
+		'%s/word/replacement_word/gc' will search through document and replace word with its replacement, but ask to confirm first.
+
+	-Copy and Paste
+		- Deleting a section automatically copies it. hit 'p' to paste it.
+		- Select text : 'v' in command mode and move with h/k/j/l to highlight from that point.
+		- Select larger chunks : 'V' to highlight entire lines at a time and use h/k/j/l
+		- Select columns (useful for databases or similar) -> Ctrl-v
+		- Once selected, hit 'y' to 'yank' it to the buffer and then p to paste wherever.
+
+	Mode 3 : Last-Line Mode
+		-Enter from command mode with ':'
+		-q -> quit
+		-w -> write to file (overwrites and therefore saves)

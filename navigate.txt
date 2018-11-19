@@ -1,0 +1,62 @@
+The command line is a very powerful tool and can do just about everything that you can do with your mouse and your screen.
+
+There are different tools that the command line allows for.
+
+Section 1 : Navigating Files
+	cd : set current directory. cd alone will go to the home directory, cd .. will go back one directory. cd x will go to x, if x is in the current directory. cd x/y will go to y, if y is in x and x is in the current directory.
+
+ls : lists files and directories within working directory
+
+-C  -- list entries in columns sorted vertically
+-F  -- append file type indicators
+-R  -- list subdirectories recursively
+-S  -- sort by size
+-a  -- list entries starting with .
+-d  -- list directory entries instead of contents
+-g  -- long listing but without owner information
+-h  -- print sizes in human readable form
+-l  -- long listing
+-m  -- comma separated
+-o  -- display file flags
+-r  -- reverse sort order
+
+mv x y/z -> moves file x into directory y with name z. can be used to rename files by not specifying the directory y. This will theremore move x from the working directory to the working directory with the name z.
+
+mkdir -> makes new directory in your working directory
+
+cp x y -> copies a file x and names it y
+cp -R x y-> copies directory recursively with all of its files included
+
+pwd -> prints working directory
+
+rm -> remove file
+
+rm -r -> remove directory (r is for recursively)
+
+cat file -> print file contents (cat for concatenate)
+cat file | wc -w -> print word count in file
+cat file | wc -l -> lines
+cat file | wc -c -> characters
+
+head x -> prints out first 10 lines of file x
+tail x -> prints out last 10 lines of file x
+
+grep word file -> returns the lines where word was found in file
+grep -n word file -> includes line number
+grep -i word file -> case insensitive
+grep --color word file -> colors the matching text
+grep -v word file -> returns lines that DON'T contain word
+
+history -> show command line history.
+history | tail -> last ten commands
+
+clear -> clears screen
+
+sudo -> preface commands with sudo to enter superuser model
+
+ssh -> secure shell protocol. ssh username@host and enter password to log into the shell of that computer.
+	Note that ssh is super powerful and can do wonderful things. I haven't used it before so I am not going in depth on it, but it is used to remote log in to another computer and you can do a whole bunch of shit with it, including putting files from that computer and putting it onto your own computer and a bunch of other things.
+
+
+
+
