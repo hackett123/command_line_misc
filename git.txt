@@ -1,0 +1,44 @@
+SETUP
+
+git -- version -> returns current version of git
+git config -- list -> returns all user settings
+    git config user.name -> returns registered name
+    git config user.email -> returns registered email
+    git config --global core.editor atom -> change standard editor to atom
+
+
+REPOSITORIES
+
+Start a repository
+- Option 1 : start one from local files
+    1. cd into the folder you want to make a directory for
+    2. git init -> makes an empty repository named .git
+    3. Initial commands :
+            $ git add *.c
+            $ git commit -m 'initial project version'
+
+Work with a repository
+
+TRACKING : does git care about our file?
+'git status' shows untracked files
+git add filename will track it
+git add directory will recursively add all files in that directory
+
+COMMIT : git commit -m "MESSAGE HERE"
+
+
+push from git to github:
+
+Initially, go to github and make a repo (with the same name).
+clone or download -> copy that thing
+
+"git remote add origin urlHere"
+"git push -u origin master"
+
+Done!
+
+Moving forward in the project...
+
+As you make edits, do "git status" to see untracked files that have changed. do "git add filename" to set that file up to be pushed. then do "git commit" and then do "git push -u origin master" and it'll go through to github.
+
+PULL : "git pull origin master"
